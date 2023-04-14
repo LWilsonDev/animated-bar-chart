@@ -19,7 +19,7 @@ const Bar: FC<BarProps> = ({totalHeight, barHeight, barWidth, barMargin}) => {
 
   useEffect(() => {
     animatedHeight.value = withTiming(barHeight);
-  }, [barHeight]);
+  }, [barHeight, animatedHeight]);
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
